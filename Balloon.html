@@ -14,12 +14,13 @@
   balloonEl.style.fontSize = fontSize + "px";
   function handleKeyDown(event) {
     if (event.key == "a") {
-       fontSize *= 1.1;
-       balloonEl.style.fontSize = fontSize + "px";
-       event.preventDefault();
+     fontSize *= 1.1;
+     balloonEl.style.fontSize = fontSize + "px";
+      event.preventDefault();
     }
     if (event.key == "b") {
       fontSize /= 1.1;
+      balloonEl.style.fontSize = fontSize + "px";
       event.preventDefault();
     }
   }
