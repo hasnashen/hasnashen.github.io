@@ -84,7 +84,9 @@
             let name = nameInput.value;
             let age = ageInput.value;
             greetingOutput.innerText = "Hello " + name + " , you are " + age + "years old!";
-            ageInput.innerText = "You" + " 're " + " just a kid!";
+            if(age < 13) {
+                greetingOutput.textContent = "You're just a kid!";
+            }
             // TODO: Display a message like "Hello NAME, you are AGE years old!"
             // Challenge: If age < 13, show "You're just a kid!" instead.
         });
