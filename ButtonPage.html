@@ -79,15 +79,14 @@
 
     <script>
         function enterHomepage() {
-            // 重定向到您的主页
-            window.location.href = "home.html";
+            
+            window.location.href = "index.html";
         }
         
-        // 可选：检查是否已经访问过，自动跳转
+        
         window.onload = function() {
             if(localStorage.getItem('visited')) {
-                // 如果用户之前访问过，可以直接跳转
-                // window.location.href = "home.html";
+                
             } else {
                 localStorage.setItem('visited', 'true');
             }
