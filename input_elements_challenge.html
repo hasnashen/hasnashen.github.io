@@ -65,10 +65,14 @@
     <section id="part3">
         <h2>Part 3: Checkbox and Radio Buttons</h2>
         <label><input type="checkbox" id="subscribeBox"> Subscribe to newsletter</label>
+        
         <p>Pick a mode:</p>
-        <label><input type="radio" name="mode" value="Light"> Light</label>
-        <label><input type="radio" name="mode" value="Dark"> Dark</label>
-        <label><input type="radio" name="mode" value="System" checked> System</label>
+        <label
+          ><input type="radio" name="mode" value="Light"> Light</label>
+        <label
+          ><input type="radio" name="mode" value="Dark"> Dark</label>
+        <label
+          ><input type="radio" name="mode" value="System" checked> System</label>
         <button id="btnSubmit">Submit</button>
         <div class="output" id="modeOutput"></div>
     </section>
@@ -113,8 +117,13 @@
         btnSubmit.addEventListener("click", () => {
             // TODO: Find which radio button is checked and display it.
             // Challenge: Include whether the user subscribed or not.
+            // If (boolean) OR if(boolean == true) check if "boolean" is true
+            // If the light mode is checked, display light
+            // If the dark mode is checked, display Dark
+            // If the system mode is checked, display System
+            // Challenge: Include whether the user subscribed or not.
         });
-    </script>
-</body>
+        </script>
+    </body>
 
 </html>
