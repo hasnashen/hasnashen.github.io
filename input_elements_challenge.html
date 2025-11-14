@@ -104,7 +104,16 @@
         colorInput.addEventListener("input", () => {
             
         });
-
+        
+        if(lightMode.checked){
+          modeOutput.tetxContent = "selected mode: Light"
+         }
+        if(darkMode.checked){
+          modeOutput.tetxContent = "selected mode: Dark"
+         }
+        if(systemMode.checked){
+          modeOutput.tetxContent = "selected mode: System"
+         }
 
         // TODO: Update the background color of colorOutput whenever the color input changes.
         // Challenge: Also display the hex code and volume value dynamically.
@@ -114,10 +123,15 @@
         const btnSubmit = document.getElementById("btnSubmit");
         const modeOutput = document.getElementById("modeOutput");
 
+        
         btnSubmit.addEventListener("click", () => {
             // TODO: Find which radio button is checked and display it.
             // Challenge: Include whether the user subscribed or not.
             // If (boolean) OR if(boolean == true) check if "boolean" is true
+            // e.g.:
+            // if(lightMode.checked){
+            //  do stuff
+            // }
             // If the light mode is checked, display light
             // If the dark mode is checked, display Dark
             // If the system mode is checked, display System
