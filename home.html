@@ -104,20 +104,30 @@ body {
     <script>
     const music = document.getElementById('bgMusic');
 
-   
-    music.currentTime = localStorage.getItem('musicTime') || 0;
 
+    document.addEventListener('visibilitychange', function() {
+        if (!document.hidden) {
+            music.currentTime = localStorage.getItem('musicTime') || 0;
+            music.play().catch(e => console.log('播放被阻止'));
+        }
+    });
 
     setInterval(() => {
-        localStorage.setItem('musicTime', music.currentTime);
-    }, 1000);
+        if (!isNaN(music.duration)) {
+            localStorage.setItem('musicTime', music.currentTime);
+        }
+    }, 500);
 
-
-    music.play().catch(e => {
-        console.log('自动播放被阻止');
+    window.addEventListener('load', function() {
+        music.currentTime = localStorage.getItem('musicTime') || 0;
+        music.play().catch(e => console.log('需要用户交互'));
     });
-    </script>
 
+
+    document.addEventListener('click', function() {
+        music.play();
+    }, { once: true });
+    </script>
 
 
         <a href="https://www.google.com">Link to Google</a>
