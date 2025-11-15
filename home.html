@@ -97,15 +97,26 @@ body {
 
         
 
-
     <audio id="bgMusic" autoplay loop>
         <source src="Dj_Okawari_-_Flower_Dance_feat_Tabeyellow_(mp3.pm).mp3" type="audio/mpeg">
     </audio>
 
     <script>
-        document.getElementById('bgMusic').play();
+    const music = document.getElementById('bgMusic');
+
+   
+    music.currentTime = localStorage.getItem('musicTime') || 0;
+
+
+    setInterval(() => {
+        localStorage.setItem('musicTime', music.currentTime);
+    }, 1000);
+
+
+    music.play().catch(e => {
+        console.log('自动播放被阻止');
+    });
     </script>
-</body>
 
 
 
