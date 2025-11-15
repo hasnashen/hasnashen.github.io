@@ -45,8 +45,20 @@
             line-height: 1.6;
             opacity: 0.9;
             text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); 
-}
         
+        }
+        .welcome-text {
+            font-size: 1.4rem;
+            text-shadow: 3px 3px 6px rgba(83, 8, 37, 0.5);
+            cursor: pointer;
+        }
+
+        .welcome-text {
+            font-size: 1.4rem;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+            color: rgba(250, 180, 180, 0.8); 
+        }
+
         .enter-btn {
             padding: 15px 50px;
             font-size: 1.3rem;
@@ -60,7 +72,7 @@
         }
         
         .enter-btn:hover {
-            background: #ff52a3;
+            background: #e97fb1;
             transform: translateY(-3px);
             box-shadow: 0 8px 20px rgba(255,107,107,0.6);
         }
@@ -77,30 +89,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-body {
-  background-image: url('sanrio1106.4.jpg'); 
-  background-repeat: no-repeat; 
-  background-size: cover; 
-  background-attachment: fixed; 
-}
-</style>
+    <style>
+        body {
+            background-image: url('sanrio1106.4.jpg'); 
+            background-repeat: no-repeat; 
+            background-size: cover; 
+            background-attachment: fixed; 
+        }
+    </style>
 </head>
 <body>
 
 <body>
     <div class="container">
         <h1>𝒲ℯ𝓁𝒸ℴ𝓂ℯ 𝓉ℴ 𝓗𝓪𝓼𝓷𝓪 𝓢𝓱𝓮𝓷'𝓼 𝒲ℯ𝒷𝓈𝒾𝓉ℯ</h1>
-        <p>𝚁𝚎𝚊𝚍𝚢 𝚝𝚘 𝚐𝚎𝚝 𝚒𝚗𝚝𝚘 𝚖𝚢 𝚠𝚘𝚛𝚕𝚍?<br>✿✿✿✿✿✿✿✿✿✿</p>
+        <p><span class="welcome-text">𝚁𝚎𝚊𝚍𝚢 𝚝𝚘 𝚐𝚎𝚝 𝚒𝚗𝚝𝚘 𝚖𝚢 𝚠𝚘𝚛𝚕𝚍?</span><br>✿✿✿✿✿✿✿✿✿✿</p>
         <button class="enter-btn" onclick="goToHomepage()">Enter the Website</button>
     </div>
 
     <script>
         function goToHomepage() {
-          
             window.location.href = "home.html";
-            
         }
+   
+        
     
         document.addEventListener('keydown', function(event) {
             if (event.code === 'Enter') {
