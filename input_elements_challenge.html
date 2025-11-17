@@ -105,15 +105,7 @@
             
         });
         
-        if(lightMode.checked){
-          modeOutput.tetxContent = "selected mode: Light"
-         }
-        if(darkMode.checked){
-          modeOutput.tetxContent = "selected mode: Dark"
-         }
-        if(systemMode.checked){
-          modeOutput.tetxContent = "selected mode: System"
-         }
+        
 
         // TODO: Update the background color of colorOutput whenever the color input changes.
         // Challenge: Also display the hex code and volume value dynamically.
@@ -123,6 +115,15 @@
         const btnSubmit = document.getElementById("btnSubmit");
         const modeOutput = document.getElementById("modeOutput");
 
+        if(lightMode.checked){
+          modeOutput.textContent = "selected mode: Light"
+         }
+        if(darkMode.checked){
+          modeOutput.textContent = "selected mode: Dark"
+         }
+        if(systemMode.checked){
+          modeOutput.textContent = "selected mode: System"
+         }
         
         btnSubmit.addEventListener("click", () => {
             // TODO: Find which radio button is checked and display it.
