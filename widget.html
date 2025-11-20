@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type in your name</title>
+    <style>
+        text{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 1em;
+        }
+        
+        body {
+            color: rgb(238, 134, 179);
+            height: 100vh;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+                
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        p {
+            font-size: 1.4rem;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+            opacity: 0.9;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); 
+        }
+
+
+        .enter-btn {
+            padding: 15px 50px;
+            font-size: 1.3rem;
+            background: #99d2e0;
+            color: rgb(253, 236, 162);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(230, 155, 233, 0.4);
+        }
+        
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        body {
+            background-image: url('sanrio1106.4.jpg'); 
+            background-size: cover; 
+            background-attachment: fixed; 
+        }
+    
+    </style>
+</head>
+
+        
+<body>
+   
+
+    <div class="container">
+        <h1>Type your name here.</h1>
+           <input id="nameInput" type="text" placeholder="Enter your name">
+        <button class="enter-btn" onclick="goToHomepage()">Submit</button>
+    </div>
+
+    <script>
+        function goToHomepage() {
+            window.location.href = "home.html";
+        }
+    </script>
+</body>
+</html>
