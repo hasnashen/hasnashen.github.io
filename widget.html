@@ -34,9 +34,17 @@
             text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); 
         }
 
+
+        .container {
+            position: relative; 
+        }
+
         .error {
             color: red;
-            display: none; 
+            display: none;
+            margin-top: 5px; 
+            font-size: 0.9rem;
+            text-align: center;
         }
 
         .enter-btn {
@@ -69,19 +77,32 @@
         
 <body>
    
-
     <div class="container">
         <h1>Type your name here.</h1>
-           <input id="nameInput" type="text" placeholder="𝐸𝑛𝑡𝑒𝑟 𝑦𝑜𝑢𝑟 𝑛𝑎𝑚𝑒.">
-        <button class="enter-btn" onclick="goToHomepage()">Submit</button>
+            <input id="nameInput" type="text" placeholder="Enter your name.">
+        <div id="errorMessage" class="error">Please do not enter empty text. Please re-enter.</div>
+        <button class="enter-btn" onclick="checkAndGo()">Submit</button>
     </div>
-
 
 
 
     <script>
         function goToHomepage() {
             window.location.href = "home.html";
+        }
+
+        function checkAndGo() {
+        const nameInput = document.getElementById('nameInput');
+        const errorMessage = document.getElementById('errorMessage');
+        const name = nameInput.value.trim();
+    
+        if (name.length === 0) {
+            errorMessage.style.display = 'block';
+            nameInput.style.border = '2px solid red';
+            return false;
+        }
+    
+        goToHomepage();
         }
     </script>
 
