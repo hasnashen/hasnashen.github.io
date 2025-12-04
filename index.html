@@ -73,24 +73,14 @@
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
-    
+
+        body {
+            background-image: url('sanrio1106.4.jpg'); 
+            background-size: cover; 
+            background-attachment: fixed; 
+        }
     </style>
 </head>
-
-<body>
-
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-body {
-  background-image: url('sanrio1106.4.jpg'); 
-  background-size: cover; 
-  background-attachment: fixed; 
-}
-</style>
-</head>
-<body>
 
 <body>
     <div class="container">
@@ -103,9 +93,7 @@ body {
         function goToNamepage() {
             window.location.href = "widget.html";
         }
-   
-        
-    
+       
         document.addEventListener('keydown', function(event) {
             if (event.code === 'Enter') {
                 goToNamepage();
