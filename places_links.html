@@ -23,27 +23,51 @@
     <img src="富士山.jpg" alt="描述图片" style="width: 300px; height: 200px;">
 
 
-    
-    <audio id="bgMusic" autoplay loop>
-        <source src="Dj_Okawari_-_Flower_Dance_feat_Tabeyellow_(mp3.pm).mp3" type="audio/mpeg">
-    </audio>
+
+
+    <audio id="bgMusic" loop></audio>
 
     <script>
-    const music = document.getElementById('bgMusic');
+        const songNumber = localStorage.getItem("music");
+        const bgMusic = document.getElementById('bgMusic');
+        
 
-   
-    music.currentTime = localStorage.getItem('musicTime') || 0;
+        if (songNumber === "1") bgMusic.src = "Dj_Okawari_-_Flower_Dance_feat_Tabeyellow_(mp3.pm).mp3";
+        if (songNumber === "2") bgMusic.src = "7947.mp3";
+        if (songNumber === "3") bgMusic.src = "Tsuki_s_Odyssey_-_Forest_Mixtape_(mp3.pm).mp3";
+        if (songNumber === "4") bgMusic.src = "aespa_-_Melody_(mp3.pm).mp3";
+        
+        bgMusic.loop = true;  // 循环播放
+        
 
+        const savedTime = localStorage.getItem("musicTime");
+        if (savedTime) {
+            bgMusic.currentTime = Number(savedTime);
+        }
+        
 
-    setInterval(() => {
-        localStorage.setItem('musicTime', music.currentTime);
-    }, 1000);
+        bgMusic.play();
+        
+        setInterval(function() {
+            localStorage.setItem("musicTime", bgMusic.currentTime);
+        }, 1000);
 
+        window.addEventListener('beforeunload', function() {
+        // 离开页面时保存音乐状态
+        localStorage.setItem("musicPlaying", !bgMusic.paused);
+        });
 
-    music.play().catch(e => {
-        console.log('自动播放被阻止');
+        // 在分页面加载时检查并恢复播放
+        window.addEventListener('load', function() {
+            const shouldPlay = localStorage.getItem("musicPlaying") === "true";
+            if (shouldPlay && bgMusic.paused) {
+            bgMusic.play();
+        }
     });
     </script>
+    
+
+
 
 </body>
 </html>

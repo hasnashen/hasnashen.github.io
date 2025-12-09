@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>𝐂𝐡𝐨𝐨𝐬𝐞 𝐘𝐨𝐮𝐫 𝐅𝐚𝐯𝐨𝐫𝐢𝐭𝐞 𝐁𝐚𝐜𝐤𝐠𝐫𝐨𝐮𝐧𝐝 𝐌𝐮𝐬𝐢𝐜</title>
+    <style>
+        body {
+            background-image: url('sanrio1106.4.jpg'); 
+            background-repeat: no-repeat; 
+            background-size: cover; 
+            background-attachment: fixed;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+        }
+        
+        .container {
+            text-align: center;
+            width: 90%;
+            max-width: 600px;
+        }
+        
+        h1 {
+            color: #d80969;
+            margin-bottom: 40px;
+            font-size: 29px;
+        }
+        
+        .music-row {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .music-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 200px;
+        }
+        
+        .song-title {
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 1em;
+            font-size: 17px;
+        }
+        
+        audio {
+            width: 235px;
+            height: 40px;
+            margin-bottom: 1em;
+        }
+        
+        .select-btn {
+            background: #99d2e0;
+            color: rgb(253, 236, 162);
+            border: none;
+            padding: 10px 25px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        
+
+        
+        .continue-btn {
+            background: #75e675;
+            color: white;
+            border: none;
+            padding: 17px 55px;
+            border-radius: 25px;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>𝑪𝒉𝒐𝒐𝒔𝒆 𝒀𝒐𝒖𝒓 𝑭𝒂𝒗𝒐𝒓𝒊𝒕𝒆 𝑩𝒂𝒄𝒌𝒈𝒓𝒐𝒖𝒏𝒅 𝑴𝒖𝒔𝒊𝒄</h1>
+        
+        <div class="music-row">
+            <div class="music-item">
+                <div class="song-title">Flower Dance</div>
+                <audio controls src="Dj_Okawari_-_Flower_Dance_feat_Tabeyellow_(mp3.pm).mp3"></audio>
+                <button class="select-btn" onclick="pick(1)">Select</button>
+            </div>
+            
+            <div class="music-item">
+                <div class="song-title">潮鸣り</div>
+                <audio controls src="7947.mp3"></audio>
+                <button class="select-btn" onclick="pick(2)">Select</button>
+            </div>
+        </div>
+        
+        <div class="music-row">
+            <div class="music-item">
+                <div class="song-title">Forest Mixtape</div>
+                <audio controls src="Tsuki_s_Odyssey_-_Forest_Mixtape_(mp3.pm).mp3"></audio>
+                <button class="select-btn" onclick="pick(3)">Select</button>
+            </div>
+            
+            <div class="music-item">
+                <div class="song-title">Melody</div>
+                <audio controls src="aespa_-_Melody_(mp3.pm).mp3"></audio>
+                <button class="select-btn" onclick="pick(4)">Select</button>
+            </div>
+        </div>
+        
+        <button class="continue-btn" id="nextBtn" onclick="goHome()" disabled>Continue to Homepage</button>
+    </div>
+
+    <script>
+        let chosen = 0;
+        
+        function pick(num) {
+            chosen = num;
+            document.getElementById("nextBtn").disabled = false;
+            document.getElementById("nextBtn").textContent = "Continue to Homepage";
+        }
+        
+        function goHome() {
+            if (chosen) {
+                localStorage.setItem("music", chosen);
+                window.location.href = "home.html";
+            }
+        }
+    </script>
+</body>
+</html>

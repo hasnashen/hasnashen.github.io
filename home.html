@@ -18,7 +18,8 @@
             background-size: cover; 
             background-attachment: fixed; 
         }
-</style>
+    </style>
+
 </head>
 
 
@@ -103,44 +104,51 @@
             <li>SAKURA School Simulator</li>
         </ol>
 
-        
-
-    <audio id="bgMusic" autoplay loop>
-        <source src="Dj_Okawari_-_Flower_Dance_feat_Tabeyellow_(mp3.pm).mp3" type="audio/mpeg">
-    </audio>
+    <audio id="bgMusic" loop></audio>
 
     <script>
-    const music = document.getElementById('bgMusic');
-
-
-    document.addEventListener('visibilitychange', function() {
-        if (!document.hidden) {
-            music.currentTime = localStorage.getItem('musicTime') || 0;
-            music.play().catch(e => console.log('播放被阻止'));
+        const songNumber = localStorage.getItem("music");
+        const bgMusic = document.getElementById('bgMusic');
+        
+        // 设置对应的歌曲文件
+        if (songNumber === "1") {
+            bgMusic.src = "Dj_Okawari_-_Flower_Dance_feat_Tabeyellow_(mp3.pm).mp3";
+        } else if (songNumber === "2") {
+            bgMusic.src = "7947.mp3";
+        } else if (songNumber === "3") {
+            bgMusic.src = "Tsuki_s_Odyssey_-_Forest_Mixtape_(mp3.pm).mp3";
+        } else if (songNumber === "4") {
+            bgMusic.src = "aespa_-_Melody_(mp3.pm).mp3";
+        } else {
+            window.location.href = "music.html";
         }
-    });
-
-    setInterval(() => {
-        if (!isNaN(music.duration)) {
-            localStorage.setItem('musicTime', music.currentTime);
+        
+        
+        const savedTime = localStorage.getItem("musicTime");
+        if (savedTime) {
+            bgMusic.currentTime = Number(savedTime);
         }
-    }, 500);
-
-    window.addEventListener('load', function() {
-        music.currentTime = localStorage.getItem('musicTime') || 0;
-        music.play().catch(e => console.log('需要用户交互'));
-    });
-
-
-    document.addEventListener('click', function() {
-        music.play();
-    }, { once: true });
+        
+        // 尝试播放（有些浏览器需要用户点击）
+        bgMusic.play().catch(function() {
+            // 如果失败，等用户点击页面再播放
+            document.body.onclick = function() {
+                bgMusic.play();
+                document.body.onclick = null; 
+            };
+        });
+        
+        // 每隔1秒保存播放时间
+        setInterval(function() {
+            localStorage.setItem("musicTime", bgMusic.currentTime);
+        }, 1000);
     </script>
+    
 
 
         <a href="https://www.google.com">Link to Google</a>
 
-        <audio controls src="BeepBox-Song.wav"></audio>
+
 </body>
 
 </html>
