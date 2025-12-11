@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favourite Cities & Countries On the Earth</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=Noto+Sans+SC:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-image: url('sanrio1106.4.jpg'); 
+            background-repeat: no-repeat; 
+            background-size: cover; 
+            background-attachment: fixed; 
+        } 
+    </style>                 
+
+</head>
+<body>
+    <h1>✬ My Favourite stars ✬</h1>
+    <a href="home.html">Home Page</a>
+    <p> ✩ These are all about my favourite stars ✩ </p>
+    <h3> ⋆ K-pop ⋆ </h3>
+        <h4>I enjoy listening to K-pop songs and watch their vocal conserts in my spare time. I buy their albums and their photocards every two months. 
+            I love WINTER in aespa the most! She loves nature and is also kind and beautiful. Her stage presence is so strong, and she always strives 
+            to present her best self to her fans through different stage outfits and songs. Her clear voice captivates me, and my favorite song of hers is her solo "Spark." 
+            Besides, I love G-Dragon in Bigbang too. G-Dragon composes and writes for BIGBANG and his solo works. His music's melodies and meaningful lyrics deeply move me. 
+            He's brave, even mocking unfair organizers on stage, yet surprisingly shy. His positive personality inspires me.
+            I also love the songs of ILLIT, IVE, AESPA and BIGBANG the most：） </h4>
+
+
+
+
+
+
+
+
+
+    <audio id="bgMusic" loop></audio>
+
+    <script>
+        const songNumber = localStorage.getItem("music");
+        const bgMusic = document.getElementById('bgMusic');
+        
+        if (songNumber === "1") bgMusic.src = "Dj_Okawari_-_Flower_Dance_feat_Tabeyellow_(mp3.pm).mp3";
+        if (songNumber === "2") bgMusic.src = "7947.mp3";
+        if (songNumber === "3") bgMusic.src = "Tsuki_s_Odyssey_-_Forest_Mixtape_(mp3.pm).mp3";
+        if (songNumber === "4") bgMusic.src = "aespa_-_Melody_(mp3.pm).mp3";
+        
+        bgMusic.loop = true;
+    
+        const savedTime = localStorage.getItem("musicTime");
+        if (savedTime) {
+            bgMusic.currentTime = Number(savedTime);
+        }
+        
+        bgMusic.play();
+        
+        setInterval(function() {
+            localStorage.setItem("musicTime", bgMusic.currentTime);
+        }, 1000);
+
+        window.addEventListener('beforeunload', function() {
+        localStorage.setItem("musicPlaying", !bgMusic.paused);
+        });
+
+        window.addEventListener('load', function() {
+            const shouldPlay = localStorage.getItem("musicPlaying") === "true";
+            if (shouldPlay && bgMusic.paused) {
+            bgMusic.play();
+        }
+    });
+    </script>
+    
+
+
+
+</body>
+</html>
