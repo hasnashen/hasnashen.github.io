@@ -93,6 +93,24 @@
       <button class="enter-btn" onclick="checkAndGo()">Submit</button>
     </div>
 
+
+    <script>
+        const nameInput = document.getElementById("nameInput");
+        const ageInput = document.getElementById("ageInput");
+        const btnGreet = document.getElementById("btnGreet");
+        const greetingOutput = document.getElementById("greetingOutput");
+
+        btnGreet.addEventListener("click", () => {
+            let name = nameInput.value;
+            let age = ageInput.value;
+            greetingOutput.innerText = "Hello " + name + " !";
+        });
+    </script>
+
+
+
+
+
     <script>
       function goToHomepage() {
         window.location.href = "home.html";
