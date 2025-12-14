@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favourite Cities & Countries On the Earth</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=Noto+Sans+SC:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .images-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 20px 0;
+            justify-content: flex-start;
+        }
+        
+        .image-item {
+            flex: 1 1 calc(33.33% - 20px);
+            min-width: 250px;
+            max-width: 350px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        
+        .image-container {
+            margin-bottom: 15px;
+        }
+        
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        .city-title {
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+        }
+        
+        .country-title {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+        }
+
+        body * {
+            border: none !important;
+            outline: none !important;
+            box-shadow: none !important;
+        }
+
+        img {
+            border: 4px solid var(--secondary) !important;
+            border-radius: 16px !important;
+            background: var(--primary) !important;
+        }
+
+        div {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        /* 响应式设计 - 不同屏幕尺寸下的布局 */
+        @media (max-width: 1200px) {
+            .image-item {
+                flex: 1 1 calc(50% - 20px);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .image-item {
+                flex: 1 1 100%;
+                max-width: 400px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .images-container {
+                gap: 15px;
+            }
+            
+            .image-item {
+                flex: 1 1 100%;
+                min-width: 200px;
+            }
+            
+            .image-container img {
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>My Favourite Cities & Countries On the Earth</h1>
+    <a href="home.html">Home Page</a>
+
+    <p> ☃ This page will show my favorite attractions in various countries or cities ☃ </p>
+<h4>𝐼'𝑣𝑒 𝑡𝑟𝑎𝑣𝑒𝑙𝑒𝑑 𝑡𝑜 𝑚𝑎𝑛𝑦 𝑝𝑙𝑎𝑐𝑒𝑠 𝑙𝑖𝑘𝑒 𝐽𝑎𝑝𝑎𝑛, 𝑇ℎ𝑎𝑖𝑙𝑎𝑛𝑑, 𝑡ℎ𝑒 𝑈𝐾, 𝑎𝑛𝑑 𝑆𝑝𝑎𝑖𝑛. 𝐸𝑣𝑒𝑟𝑦 𝑑𝑒𝑠𝑡𝑖𝑛𝑎𝑡𝑖𝑜𝑛 𝑙𝑒𝑓𝑡 𝑎 𝑠𝑡𝑟𝑜𝑛𝑔 𝑖𝑚𝑝𝑟𝑒𝑠𝑠𝑖𝑜𝑛 𝑎𝑛𝑑 𝑡𝑎𝑢𝑔ℎ𝑡 𝑚𝑒 
+    𝑠𝑜𝑚𝑒𝑡ℎ𝑖𝑛𝑔 𝑛𝑒𝑤 𝑎𝑏𝑜𝑢𝑡 𝑑𝑖𝑓𝑓𝑒𝑟𝑒𝑛𝑡 𝑐𝑢𝑙𝑡𝑢𝑟𝑒𝑠. 𝑀𝑦 𝑓𝑎𝑣𝑜𝑟𝑖𝑡𝑒𝑠 𝑎𝑟𝑒 𝐶ℎ𝑖𝑛𝑎 𝑎𝑛𝑑 𝐽𝑎𝑝𝑎𝑛. 𝐶ℎ𝑖𝑛𝑎 𝑖𝑠 𝑠𝑜 𝑏𝑖𝑔 𝑡ℎ𝑎𝑡 𝐼'𝑣𝑒 𝑜𝑛𝑙𝑦 𝑠𝑒𝑒𝑛 ℎ𝑎𝑙𝑓 𝑜𝑓 𝑖𝑡, 
+    𝑎𝑛𝑑 𝐼'𝑚 𝑒𝑎𝑔𝑒𝑟 𝑡𝑜 𝑒𝑥𝑝𝑙𝑜𝑟𝑒 𝑚𝑜𝑟𝑒 𝑜𝑓 𝑖𝑡𝑠 𝑝𝑟𝑜𝑣𝑖𝑛𝑐𝑒𝑠 𝑎𝑛𝑑 𝑐𝑖𝑡𝑖𝑒𝑠 𝑡𝑜 𝑒𝑥𝑝𝑒𝑟𝑖𝑒𝑛𝑐𝑒 𝑣𝑎𝑟𝑖𝑜𝑢𝑠 𝑒𝑡ℎ𝑛𝑖𝑐 𝑐𝑢𝑙𝑡𝑢𝑟𝑒𝑠. 𝐼 𝑎𝑙𝑠𝑜 𝑤𝑎𝑛𝑡 𝑡𝑜 𝑟𝑒𝑣𝑖𝑠𝑖𝑡 𝑚𝑦 ℎ𝑜𝑚𝑒𝑡𝑜𝑤𝑛, 
+    𝑇𝑎𝑖𝑤𝑎𝑛 𝑎𝑛𝑑 𝐺𝑎𝑛𝑠𝑢--𝑇𝑎𝑖𝑤𝑎𝑛 𝑓𝑜𝑟 𝑎𝑙𝑙 𝑡ℎ𝑒 𝑓𝑢𝑛 𝑚𝑒𝑚𝑜𝑟𝑖𝑒𝑠, 𝑎𝑛𝑑 𝐺𝑎𝑛𝑠𝑢 𝑓𝑜𝑟 𝑡ℎ𝑒 𝑚𝑎𝑛𝑦 𝑤𝑎𝑟𝑚 𝑟𝑒𝑙𝑎𝑡𝑖𝑣𝑒𝑠 𝑡ℎ𝑒𝑟𝑒. 𝐸𝑣𝑒𝑛 𝑡ℎ𝑜𝑢𝑔ℎ 𝐼'𝑣𝑒 𝑏𝑒𝑒𝑛 𝑡𝑜 𝐽𝑎𝑝𝑎𝑛 𝑎𝑏𝑜𝑢𝑡 𝑠𝑒𝑣𝑒𝑛 𝑡𝑖𝑚𝑒𝑠, 
+    𝐼 𝑠𝑡𝑖𝑙𝑙 ℎ𝑜𝑝𝑒 𝑡𝑜 𝑔𝑜 𝑏𝑎𝑐𝑘 𝑡𝑜 𝑤𝑒𝑎𝑟 𝑎 𝑘𝑖𝑚𝑜𝑛𝑜 𝑎𝑛𝑑 𝑠𝑒𝑒 𝑎 𝑚𝑎𝑗𝑜𝑟 𝑓𝑖𝑟𝑒𝑤𝑜𝑟𝑘𝑠 𝑠ℎ𝑜𝑤. 𝐵𝑒𝑠𝑖𝑑𝑒𝑠, 𝐼 ℎ𝑎𝑣𝑒 𝑡𝑤𝑜 𝑚𝑜𝑟𝑒 𝑏𝑖𝑔 𝑔𝑜𝑎𝑙𝑠: 𝑡𝑜 𝑠𝑒𝑒 𝑚𝑦 𝑓𝑎𝑣𝑜𝑟𝑖𝑡𝑒 𝐾-𝑝𝑜𝑝 𝑖𝑑𝑜𝑙 
+    𝑎𝑛𝑑 𝑗𝑜𝑖𝑛 𝑡ℎ𝑒𝑖𝑟 𝑐𝑜𝑛𝑐𝑒𝑟𝑡𝑠 𝑖𝑛 𝑆𝑜𝑢𝑡ℎ 𝐾𝑜𝑟𝑒𝑎, 𝑎𝑛𝑑 𝑡𝑜 𝑠𝑒𝑒 𝑡ℎ𝑒 𝑎𝑚𝑎𝑧𝑖𝑛𝑔 𝑎𝑢𝑟𝑜𝑟𝑎𝑠 𝑖𝑛 𝐼𝑐𝑒𝑙𝑎𝑛𝑑.</h4>
+
+    <p>𝐄𝐚𝐜𝐡 𝐚𝐭𝐭𝐫𝐚𝐜𝐭𝐢𝐨𝐧 𝐡𝐚𝐬 𝐢𝐭𝐬 𝐨𝐰𝐧 𝐮𝐧𝐢𝐪𝐮𝐞 𝐟𝐞𝐚𝐭𝐮𝐫𝐞𝐬, 𝐰𝐡𝐞𝐭𝐡𝐞𝐫 𝐢𝐭'𝐬 𝐢𝐧 𝐢𝐭𝐬 𝐚𝐩𝐩𝐞𝐚𝐫𝐚𝐧𝐜𝐞, 
+        𝐜𝐮𝐥𝐭𝐮𝐫𝐚𝐥 𝐬𝐢𝐠𝐧𝐢𝐟𝐢𝐜𝐚𝐧𝐜𝐞, 𝐨𝐫 𝐡𝐢𝐬𝐭𝐨𝐫𝐢𝐜𝐚𝐥 𝐛𝐚𝐜𝐤𝐠𝐫𝐨𝐮𝐧𝐝！</p>
+
+    <h2 class="country-title">① ℂ𝕙𝕚𝕟𝕒</h2>
+    
+    <h2 class="city-title">1. Beijing 北京</h2>
+    <div class="images-container">
+        <div class="image-item">
+            <div class="image-container">
+                <strong>The Forbidden City 故宫</strong><br>
+                <img src="故宫.jpg" alt="故宫">
+            </div>
+        </div>
+        <div class="image-item">
+            <div class="image-container">
+                <strong>The Great Wall 长城</strong><br>
+                <img src="长城.png" alt="长城">
+            </div>
+        </div>
+    </div>
+
+    <h2 class="city-title">2. Shanghai 上海</h2>
+    <div class="images-container">
+        <div class="image-item">
+            <div class="image-container">
+                <strong>Shanghai Disneyland 上海迪士尼</strong><br>
+                <img src="上海迪士尼.png" alt="上海迪士尼">
+            </div>
+        </div>
+        <div class="image-item">
+            <div class="image-container">
+                <strong>The Bund 外滩</strong><br>
+                <img src="外滩.png" alt="外滩">
+            </div>
+        </div>
+        <div class="image-item">
+            <div class="image-container">
+                <strong>Shanghai City God Temple 城隍庙</strong><br>
+                <img src="城隍庙.png" alt="城隍庙">
+            </div>
+        </div>
+    </div>
+
+    <h3 class="city-title">3. Taiwan 台湾</h3>
+    <div class="images-container">
+        <div class="image-item">
+            <div class="image-container">
+                <strong>Green Island 绿岛</strong><br>
+                <img src="绿岛.png" alt="绿岛">
+            </div>
+        </div>
+    </div>
+
+    <h3 class="city-title">4. Harbin 哈尔滨</h3>
+    <div class="images-container">
+        <div class="image-item">
+            <div class="image-container">
+                <strong>Harbin Ice and Snow World 冰雪大世界</strong><br>
+                <img src="冰雪大世界.png" alt="冰雪大世界">
+            </div>
+        </div>
+    </div>
+
+    <h3 class="city-title">5. Hangzhou 杭州</h3>
+    <div class="images-container">
+        <div class="image-item">
+            <div class="image-container">
+                <strong>Jinlong Cave 金龙洞</strong><br>
+                <img src="金龙洞.jpg" alt="Jinlong Cave">
+            </div>
+        </div>
+        <div class="image-item">
+            <div class="image-container">
+                <strong>Hello Kitty Park 凯蒂猫主题乐园</strong><br>
+                <img src="hello kitty 乐园.png" alt="hello kitty 主题乐园">
+            </div>
+        </div>
+    </div>
+
+    <h2 class="country-title">② 𝕁𝕒𝕡𝕒𝕟</h2>
+    
+    <h3 class="city-title">1. Tokyo 東京</h3>
+    <div class="images-container">
+        <div class="image-item">
+            <div class="image-container">
+                <strong>Tokyo DisneySea 東京ディズニーシー</strong><br>
+                <img src="富士山.jpg" alt="富士山">
+            </div>
+        </div>
+        <div class="image-item">
+            <div class="image-container">
+                <strong>Akihabara 秋葉原</strong><br>
+                <img src="秋叶原.jpg" alt="秋叶原">
+            </div>
+        </div>
+        <div class="image-item">
+            <div class="image-container">
+                <strong>Shibuya 渋谷</strong><br>
+                <img src="涩谷.jpg" alt="涩谷">
+            </div>
+        </div>
+    </div>
+
+    <h3 class="city-title">2. Nara 奈良</h3>
+    <div class="images-container">
+        <div class="image-item">
+            <div class="image-container">
+                <strong>Nara Park 奈良公園</strong><br>
+                <img src="奈良.jpg" alt="奈良公园">
+            </div>
+        </div>
+    </div>
+
+    <h3 class="city-title">3. Hokkaido 北海道</h3>
+    <div class="images-container">
+        <div class="image-item">
+            <div class="image-container">
+                <strong>Winter Sights 冬の観光スポット</strong><br>
+                <img src="北海道.jpg" alt="北海道">
+            </div>
+        </div>
+    </div>
+
+    <h2 class="country-title">③ 𝑬𝒏𝒈𝒍𝒂𝒏𝒅</h2>
+    
+    <h2 class="city-title">1. London </h2>
+    <div class="images-container">
+        <div class="image-item">
+            <div class="image-container">
+                <strong> Big Ben </strong><br>
+                <img src="故宫.jpg" alt="故宫">
+            </div>
+        </div>
+        <div class="image-item">
+            <div class="image-container">
+                <strong>The Great Wall 长城</strong><br>
+                <img src="长城.png" alt="长城">
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <audio id="bgMusic" loop></audio>
+
+    <script>
+        const songNumber = localStorage.getItem("music");
+        const bgMusic = document.getElementById('bgMusic');
+        
+
+        if (songNumber === "1") bgMusic.src = "Dj_Okawari_-_Flower_Dance_feat_Tabeyellow_(mp3.pm).mp3";
+        if (songNumber === "2") bgMusic.src = "7947.mp3";
+        if (songNumber === "3") bgMusic.src = "Tsuki_s_Odyssey_-_Forest_Mixtape_(mp3.pm).mp3";
+        if (songNumber === "4") bgMusic.src = "aespa_-_Melody_(mp3.pm).mp3";
+        
+        bgMusic.loop = true;
+        
+
+        const savedTime = localStorage.getItem("musicTime");
+        if (savedTime) {
+            bgMusic.currentTime = Number(savedTime);
+        }
+        
+
+        bgMusic.play();
+        
+        setInterval(function() {
+            localStorage.setItem("musicTime", bgMusic.currentTime);
+        }, 1000);
+
+        window.addEventListener('beforeunload', function() {
+        localStorage.setItem("musicPlaying", !bgMusic.paused);
+        });
+
+        window.addEventListener('load', function() {
+            const shouldPlay = localStorage.getItem("musicPlaying") === "true";
+            if (shouldPlay && bgMusic.paused) {
+            bgMusic.play();
+        }
+    });
+    </script>
+</body>
+</html>
