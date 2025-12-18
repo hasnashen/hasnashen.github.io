@@ -31,9 +31,14 @@ h3 {
     font-family: "Noto Sans";
 }
 
-p{
-    background:var(--accent);
-}
+
+body {
+    background-image: url('sanrio1106.4.jpg'); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-attachment: fixed; 
+    }
+
 
 li::marker {
     color:var(--secondary);
