@@ -37,6 +37,11 @@
             display: block;
             margin: 0 auto;
         }
+
+        .section-title {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
         
         .city-title {
             margin-top: 30px;
@@ -48,6 +53,15 @@
             margin-top: 40px;
             margin-bottom: 20px;
             padding-bottom: 10px;
+            padding: 15px 50px;
+            font-size: 1.3rem;
+            text-align: center; 
+            background: #fab9cd;
+            outline: 0.5rem solid rgb(233, 216, 139);
+            color: rgb(61, 45, 12);
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(230, 155, 233, 0.4);
         }
 
         body * {
@@ -66,6 +80,7 @@
             margin: 0 !important;
             padding: 0 !important;
         }
+
 
         /* 响应式设计 - 不同屏幕尺寸下的布局 */
         @media (max-width: 1200px) {
@@ -99,10 +114,12 @@
 
 </head>
 <body>
-    <h1>My Favourite Cities & Countries On the Earth</h1>
-    <a href="home.html">Home Page</a>
+    <div>
+        <h1>My Favourite Cities & Countries On the Earth</h1>
+    </div>
 
-    <p> ☃ This page will show my favorite attractions in various countries or cities ☃ </p>
+    <a href="home.html">Home Page</a>
+    <p class="section-title">☃ This page will show my favorite attractions in various countries or cities ☃</p>
 <h4>𝐼'𝑣𝑒 𝑡𝑟𝑎𝑣𝑒𝑙𝑒𝑑 𝑡𝑜 𝑚𝑎𝑛𝑦 𝑝𝑙𝑎𝑐𝑒𝑠 𝑙𝑖𝑘𝑒 𝐽𝑎𝑝𝑎𝑛, 𝑇ℎ𝑎𝑖𝑙𝑎𝑛𝑑, 𝑡ℎ𝑒 𝑈𝐾, 𝑎𝑛𝑑 𝑆𝑝𝑎𝑖𝑛. 𝐸𝑣𝑒𝑟𝑦 𝑑𝑒𝑠𝑡𝑖𝑛𝑎𝑡𝑖𝑜𝑛 𝑙𝑒𝑓𝑡 𝑎 𝑠𝑡𝑟𝑜𝑛𝑔 𝑖𝑚𝑝𝑟𝑒𝑠𝑠𝑖𝑜𝑛 𝑎𝑛𝑑 𝑡𝑎𝑢𝑔ℎ𝑡 𝑚𝑒 
     𝑠𝑜𝑚𝑒𝑡ℎ𝑖𝑛𝑔 𝑛𝑒𝑤 𝑎𝑏𝑜𝑢𝑡 𝑑𝑖𝑓𝑓𝑒𝑟𝑒𝑛𝑡 𝑐𝑢𝑙𝑡𝑢𝑟𝑒𝑠. 𝑀𝑦 𝑓𝑎𝑣𝑜𝑟𝑖𝑡𝑒𝑠 𝑎𝑟𝑒 𝐶ℎ𝑖𝑛𝑎 𝑎𝑛𝑑 𝐽𝑎𝑝𝑎𝑛. 𝐶ℎ𝑖𝑛𝑎 𝑖𝑠 𝑠𝑜 𝑏𝑖𝑔 𝑡ℎ𝑎𝑡 𝐼'𝑣𝑒 𝑜𝑛𝑙𝑦 𝑠𝑒𝑒𝑛 ℎ𝑎𝑙𝑓 𝑜𝑓 𝑖𝑡, 
     𝑎𝑛𝑑 𝐼'𝑚 𝑒𝑎𝑔𝑒𝑟 𝑡𝑜 𝑒𝑥𝑝𝑙𝑜𝑟𝑒 𝑚𝑜𝑟𝑒 𝑜𝑓 𝑖𝑡𝑠 𝑝𝑟𝑜𝑣𝑖𝑛𝑐𝑒𝑠 𝑎𝑛𝑑 𝑐𝑖𝑡𝑖𝑒𝑠 𝑡𝑜 𝑒𝑥𝑝𝑒𝑟𝑖𝑒𝑛𝑐𝑒 𝑣𝑎𝑟𝑖𝑜𝑢𝑠 𝑒𝑡ℎ𝑛𝑖𝑐 𝑐𝑢𝑙𝑡𝑢𝑟𝑒𝑠. 𝐼 𝑎𝑙𝑠𝑜 𝑤𝑎𝑛𝑡 𝑡𝑜 𝑟𝑒𝑣𝑖𝑠𝑖𝑡 𝑚𝑦 ℎ𝑜𝑚𝑒𝑡𝑜𝑤𝑛, 
@@ -110,11 +127,13 @@
     𝐼 𝑠𝑡𝑖𝑙𝑙 ℎ𝑜𝑝𝑒 𝑡𝑜 𝑔𝑜 𝑏𝑎𝑐𝑘 𝑡𝑜 𝑤𝑒𝑎𝑟 𝑎 𝑘𝑖𝑚𝑜𝑛𝑜 𝑎𝑛𝑑 𝑠𝑒𝑒 𝑎 𝑚𝑎𝑗𝑜𝑟 𝑓𝑖𝑟𝑒𝑤𝑜𝑟𝑘𝑠 𝑠ℎ𝑜𝑤. 𝐵𝑒𝑠𝑖𝑑𝑒𝑠, 𝐼 ℎ𝑎𝑣𝑒 𝑡𝑤𝑜 𝑚𝑜𝑟𝑒 𝑏𝑖𝑔 𝑔𝑜𝑎𝑙𝑠: 𝑡𝑜 𝑠𝑒𝑒 𝑚𝑦 𝑓𝑎𝑣𝑜𝑟𝑖𝑡𝑒 𝐾-𝑝𝑜𝑝 𝑖𝑑𝑜𝑙 
     𝑎𝑛𝑑 𝑗𝑜𝑖𝑛 𝑡ℎ𝑒𝑖𝑟 𝑐𝑜𝑛𝑐𝑒𝑟𝑡𝑠 𝑖𝑛 𝑆𝑜𝑢𝑡ℎ 𝐾𝑜𝑟𝑒𝑎, 𝑎𝑛𝑑 𝑡𝑜 𝑠𝑒𝑒 𝑡ℎ𝑒 𝑎𝑚𝑎𝑧𝑖𝑛𝑔 𝑎𝑢𝑟𝑜𝑟𝑎𝑠 𝑖𝑛 𝐼𝑐𝑒𝑙𝑎𝑛𝑑.</h4>
 
-    <p>𝐄𝐚𝐜𝐡 𝐚𝐭𝐭𝐫𝐚𝐜𝐭𝐢𝐨𝐧 𝐡𝐚𝐬 𝐢𝐭𝐬 𝐨𝐰𝐧 𝐮𝐧𝐢𝐪𝐮𝐞 𝐟𝐞𝐚𝐭𝐮𝐫𝐞𝐬, 𝐰𝐡𝐞𝐭𝐡𝐞𝐫 𝐢𝐭’𝐬 𝐢𝐧 𝐢𝐭𝐬 𝐚𝐩𝐩𝐞𝐚𝐫𝐚𝐧𝐜𝐞, 
+
+    <p class="section-title">𝐄𝐚𝐜𝐡 𝐚𝐭𝐭𝐫𝐚𝐜𝐭𝐢𝐨𝐧 𝐡𝐚𝐬 𝐢𝐭𝐬 𝐨𝐰𝐧 𝐮𝐧𝐢𝐪𝐮𝐞 𝐟𝐞𝐚𝐭𝐮𝐫𝐞𝐬, 𝐰𝐡𝐞𝐭𝐡𝐞𝐫 𝐢𝐭’𝐬 𝐢𝐧 𝐢𝐭𝐬 𝐚𝐩𝐩𝐞𝐚𝐫𝐚𝐧𝐜𝐞, 
         𝐜𝐮𝐥𝐭𝐮𝐫𝐚𝐥 𝐬𝐢𝐠𝐧𝐢𝐟𝐢𝐜𝐚𝐧𝐜𝐞, 𝐨𝐫 𝐡𝐢𝐬𝐭𝐨𝐫𝐢𝐜𝐚𝐥 𝐛𝐚𝐜𝐤𝐠𝐫𝐨𝐮𝐧𝐝！</p>
 
 
-    <h2 class="country-title">① ℂ𝕙𝕚𝕟𝕒</h2>
+
+    <h2 class="country-title">Ⅰ、  𝐂𝐡𝐢𝐧𝐚   中国</h2>
     
     <h2 class="city-title">1. Beijing 北京</h2>
     <div class="images-container">
@@ -190,7 +209,7 @@
         </div>
     </div>
 
-    <h2 class="country-title">② 𝕁𝕒𝕡𝕒𝕟</h2>
+    <h2 class="country-title">Ⅱ、  𝐉𝐚𝐩𝐚𝐧  にほん</h2>
     
     <h3 class="city-title">1. Tokyo 東京</h3>
     <div class="images-container">
@@ -234,20 +253,26 @@
         </div>
     </div>
 
-    <h2 class="country-title">③ 𝑬𝒏𝒈𝒍𝒂𝒏𝒅</h2>
+    <h2 class="country-title">Ⅲ、 𝑬𝒏𝒈𝒍𝒂𝒏𝒅</h2>
     
     <h2 class="city-title">1. London </h2>
     <div class="images-container">
         <div class="image-item">
             <div class="image-container">
                 <strong> Big Ben </strong><br>
-                <img src="故宫.jpg" alt="故宫">
+                <img src="大本钟.png" alt="大本钟">
             </div>
         </div>
+    </div>
+
+    <h2 class="country-title">Ⅳ、  𝑻𝒂𝒊𝒍𝒂𝒏𝒅     ราชอาณาจักรไทย</h2>
+    
+    <h2 class="city-title">1. Phuket ภูเก็ต</h2>
+    <div class="images-container">
         <div class="image-item">
             <div class="image-container">
-                <strong>The Great Wall 长城</strong><br>
-                <img src="长城.png" alt="长城">
+                <strong>Banana Beach หาดกล้วย </strong><br>
+                <img src="普吉岛.png" alt="普吉岛">
             </div>
         </div>
     </div>
